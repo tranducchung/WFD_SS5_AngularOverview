@@ -1,0 +1,23 @@
+<h2>Awesome Calculator</h2>
+<div>
+  <input type="number" class="form-input"
+  [value]="first"
+         (change)="onFirstChange($event.target.value)">
+  <select class="form-input" [value]="operantor"
+          (change)="onSelectChange($event.target.value); calculate()" >
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type="number" class="form-input" [value]="second"
+         (change)="onSecondChange($event.target.value)">
+</div>
+<div>
+  <button class="form-input" (click)="calculate()">
+    Thuc Thi
+  </button>
+</div>
+<div class="output">
+  {{output}}
+</div>
